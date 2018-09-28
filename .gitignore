@@ -1,1 +1,4 @@
+# ignor folder idea
 .idea/
+# txt files
+VyacheslavHutoryansky/lesson1/*.txt
