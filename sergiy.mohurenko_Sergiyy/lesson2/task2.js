@@ -4,8 +4,9 @@
 // возвращает отсортированный по возрастанию,
 // сделать двумя способами, через метод sort
 // и через цикл for
-let arr1 =[1,0,19,3,6,5];
-let arr2 =[1,17,3,9,5];
+let arr1 = [1, 0, 19, 3, 6, 5];
+let arr2 = [1, 17, 3, 9, 5];
+let arr3 = [9, 27, 0, 6, -5];
 
 function sortNumbers(arr){
     console.log(arr.sort(compare));
@@ -13,13 +14,14 @@ function sortNumbers(arr){
 
 function compare(a, b) {
     return a - b;
-  }
+}
+
 sortNumbers(arr1);
 
-function SelectionSort(arr) {
+function selectionSort(arr) {
     for (let i = 0; i < arr.length - 1; i++) {
         let min = i;
-        for (let j = i + 1; j < arr.length; j++) {
+        for (let j = +i; j < arr.length; j++) {
              if (arr[j] < arr[min])
               min = j; 
             }
@@ -29,4 +31,5 @@ function SelectionSort(arr) {
     }
     console.log(arr);
 }
-SelectionSort(arr2);
+selectionSort(arr2);
+selectionSort(arr3);

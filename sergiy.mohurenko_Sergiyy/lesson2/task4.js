@@ -5,6 +5,7 @@
 // значения при вызове функции
 function fibonacciNumbers(n) {
   let fib = [0, 1];
+  
   if (n < 2) {
     console.log(fib.slice(0, n));
   } else {
