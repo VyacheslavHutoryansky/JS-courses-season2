@@ -4,32 +4,32 @@
 // возвращает отсортированный по возрастанию,
 // сделать двумя способами, через метод sort
 // и через цикл for
-let arr1 = [1, 0, 19, 3, 6, 5];
-let arr2 = [1, 17, 3, 9, 5];
-let arr3 = [9, 27, 0, 6, -5];
+let arrayOne = [1, 0, 19, 3, 6, 5];
+let arrayTwo = [1, 17, 3, 9, 5];
+let arrayThree = [9, 27, 0, 6, -5];
 
-function sortNumbers(arr){
-    console.log(arr.sort(compare));
+function sortNumbers(array){
+    console.log(array.sort(compare));
 }
 
-function compare(a, b) {
-    return a - b;
+function compare(firstElement, secondElement) {
+    return firstElement - secondElement;
 }
 
-sortNumbers(arr1);
+sortNumbers(arrayOne);
 
-function selectionSort(arr) {
-    for (let i = 0; i < arr.length - 1; i++) {
+function selectionSort(array) {
+    for (let i = 0; i < array.length - 1; i++) {
         let min = i;
-        for (let j = +i; j < arr.length; j++) {
-             if (arr[j] < arr[min])
+        for (let j = +i; j < array.length; j++) {
+             if (array[j] < array[min])
               min = j; 
             }
-        let element = arr[min];
-        arr[min] = arr[i]; 
-        arr[i] = element;
+        let element = array[min];
+        array[min] = array[i]; 
+        array[i] = element;
     }
-    console.log(arr);
+    console.log(array);
 }
-selectionSort(arr2);
-selectionSort(arr3);
+selectionSort(arrayTwo);
+selectionSort(arrayThree);

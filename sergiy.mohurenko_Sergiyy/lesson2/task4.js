@@ -3,16 +3,16 @@
 // массив с числами Фибоначчи,
 // количество которых зависит от переданного
 // значения при вызове функции
-function fibonacciNumbers(n) {
-  let fib = [0, 1];
+function fibonacciNumbers(number) {
+  let fibonacci = [0, 1];
   
-  if (n < 2) {
-    console.log(fib.slice(0, n));
+  if (number < 2) {
+    console.log(fibonacci.slice(0, number));
   } else {
-    for (let i = 2; i < n; i++) {
-      fib[i] = fib[i - 1] + fib[i - 2];
+    for (let i = 2; i < number; i++) {
+      fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
     }
-    console.log(fib);
+    console.log(fibonacci);
   }
 }
 fibonacciNumbers(35);
