@@ -1,15 +1,15 @@
-function sortArr(arr) {
-    if (arr.length == 0) return [];
+function sortArray(array) {
+    if (array.length == 0) return [];
 
-    var a = [], b = [], p = arr[0];
-    for (var i = 1; i < arr.length; i++) {
+    var subArrayOfSmallerElements = [], subArrayOfLargerElements = [], supportingElment = array[0];
+    for (var i = 1; i < array.length; i++) {
 
-        if (arr[i] < p) a[a.length] = arr[i];
-        else b[b.length] = arr[i];
+        if (array[i] < supportingElment) subArrayOfSmallerElements[subArrayOfSmallerElements.length] = array[i];
+        else subArrayOfLargerElements[subArrayOfLargerElements.length] = array[i];
     }
 
-    return sortArr(a).concat( p,sortArr(b) );
+    return sortArray(subArrayOfSmallerElements).concat( supportingElment,sortArray(subArrayOfLargerElements) );
 }
 
 arr1 = [3, -7, 11, 4, 0, -2, 1];
-console.log( sortArr(arr1) );
+console.log( sortArray(arr1) );
