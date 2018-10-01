@@ -1,10 +1,10 @@
-function unicElemArr(arr) {
+function uniqueElementsArray(array) {
     var result = [];
 
     nextIteration:
-        for (var i = 0; i < arr.length; i++) {
-        if (result.indexOf(arr[i]) == -1) {
-            result.push(arr[i]);
+        for (var i = 0; i < array.length; i++) {
+        if (result.indexOf(array[i]) == -1) {
+            result.push(array[i]);
         }
         else continue nextIteration;
         }
@@ -13,5 +13,5 @@ function unicElemArr(arr) {
 }
 
 arr1 = [1, 1, 2, 3, 1, 2];
-arrNew = unicElemArr(arr1);
-console.log(arrNew);
+arrayNew = uniqueElementsArray(arr1);
+console.log(arrayNew);
