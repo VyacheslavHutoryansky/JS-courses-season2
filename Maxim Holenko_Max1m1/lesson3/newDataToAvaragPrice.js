@@ -63,7 +63,7 @@ let usersData = [
 
 
 function updateData(inputData) {
-    let countElements = inputData.length;
+    const countElements = inputData.length;
     resultArray = new Array(countElements);
 
     for (let index = 0; index < countElements; index++) {
