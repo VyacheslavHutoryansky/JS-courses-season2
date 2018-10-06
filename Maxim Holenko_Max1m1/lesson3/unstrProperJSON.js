@@ -65,11 +65,28 @@ let userData = {
     "success": true
 };
 
-const { requestId,
-        result: [ { accountNumber, balance: { otb },
-                    cards: [ { ucid, expireDate, expireDate: { year } } ],
-                    overdraftInfo: { lastCloseDayOverBalance },
-                    bank: { id } } ] } = userData;
+const {
+    requestId,
+    result: [{
+        accountNumber,
+        balance: {
+            otb
+        },
+        cards: [{
+            ucid,
+            expireDate,
+            expireDate: {
+                year
+            }
+        }],
+        overdraftInfo: {
+            lastCloseDayOverBalance
+        },
+        bank: {
+            id
+        }
+    }]
+} = userData;
 
 console.log(requestId);
 console.log(accountNumber);
