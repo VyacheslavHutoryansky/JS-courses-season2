@@ -64,7 +64,7 @@ let users = [
 /**
  * The new Array, where each element is an Object with properties: id, name and avaragePrice.
  */
-let dob = users.map(({ 
+let newUsersArr = users.map(({ 
     id, 
     name, 
     firstPrice, 
@@ -76,4 +76,4 @@ let dob = users.map(({
 }));
 
 console.log("New Array : ");
-console.log(dob);
+console.log(newUsersArr);
