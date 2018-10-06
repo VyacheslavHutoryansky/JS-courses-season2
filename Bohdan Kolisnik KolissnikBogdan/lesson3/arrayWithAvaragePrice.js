@@ -64,7 +64,16 @@ let users = [
 /**
  * The new Array, where each element is an Object with properties: id, name and avaragePrice.
  */
-let dob = users.map(({ id, name, firstPrice, secondPrice }) => ({ id: id, name: name, avaragePrice: (firstPrice + secondPrice) / 2 }));
+let dob = users.map(({ 
+    id, 
+    name, 
+    firstPrice, 
+    secondPrice 
+}) => ({ 
+    id, 
+    name, 
+    avaragePrice: (firstPrice + secondPrice) / 2 
+}));
 
 console.log("New Array : ");
 console.log(dob);
