@@ -1,19 +1,23 @@
 const {
   requestId,
   result: [{
-    accountNumber, balance: {
+    accountNumber,
+    balance: {
       otb
-    }, cards: [{
+    },
+    cards: [{
       expireDate: {
         year
       },
       ucid
-    }], overdraftInfo: {
+    }],
+    overdraftInfo: {
       lastCloseDayOverBalance
-    }, bank: {
+    },
+    bank: {
       id
     }
   }]
 } = jsonHomeWork;
 
-console.log(requestId);
+console.log(requestId)
