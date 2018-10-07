@@ -65,7 +65,20 @@ let user = '{\
     "success": true\
   }'
   user = JSON.parse(user);
-  let {requestId, result: [{accountNumber, balance: {otb}, cards: [{ucid, expireDate, expireDate: {year}}], overdraftInfo: {lastCloseDayOverBalance}, bank: {id}}]} = user;
+  let {
+    requestId, 
+    result: [{
+      accountNumber, 
+      balance: {otb}, 
+      cards: [{
+        ucid, 
+        expireDate, 
+        expireDate: {year}
+      }], 
+      overdraftInfo: {lastCloseDayOverBalance}, 
+      bank: {id}
+    }]
+  } = user;
   console.log(requestId);
   console.log(accountNumber);
   console.log(otb);
