@@ -63,8 +63,7 @@ const price = [
 ]
 
 function avaragePrice() {
-    let newArr = []
-    return newArr = price.map(value => {
+    return price.map(value => {
         return {
             "id": value.id,
             "name": value.name,

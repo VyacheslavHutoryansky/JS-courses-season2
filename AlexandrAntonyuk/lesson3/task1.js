@@ -65,7 +65,36 @@ const data = {
     "success": true
 }
 
-const {requestId, result: [{accountNumber, balance: {otb}, cards: [{ucid, expireDate, expireDate: {year}}], overdraftInfo: {lastCloseDayOverBalance}, bank: {id}}]} = data;
+const {
+    requestId,
+    result: [
+        {
+            accountNumber,
+            balance:
+                {
+                    otb
+                },
+            cards: [
+                {
+                    ucid,
+                    expireDate,
+                    expireDate:
+                        {
+                            year
+                        }
+                }
+            ],
+            overdraftInfo:
+                {
+                    lastCloseDayOverBalance
+                },
+            bank:
+                {
+                    id
+                }
+        }
+    ]
+} = data;
 
 
 
