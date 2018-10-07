@@ -11,20 +11,32 @@ window.onload = function () {
     //      {result: [{overdraftInfo: {lastCloseDayOverBalance}}]} = task_1,
     //      {result: [{bank: {id}}]} = task_1;
 
-    const {requestId,
-        result:
-        [{
-            accountNumber,
-            balance: {otb},
-            cards:
-                [{
-                ucid,
-                expireDate,
-                expireDate: {year}
-            }],
-            overdraftInfo: {lastCloseDayOverBalance},
-            bank: {id}
-    }]} = task_1;
+    const {
+        requestId,
+        result: [
+            {
+                accountNumber,
+                balance: {
+                    otb
+                },
+                cards: [
+                    {
+                    ucid,
+                    expireDate,
+                    expireDate: {
+                        year
+                    }
+                }
+                ],
+                overdraftInfo: {
+                    lastCloseDayOverBalance
+                },
+                bank: {
+                    id
+                }
+            }
+        ]
+    } = task_1;
 
     console.log('requestId - ' + requestId);
     console.log('accountNumber - ' + accountNumber);
@@ -40,7 +52,7 @@ window.onload = function () {
 
     const newArray = [];
 
-    function objPrice(id, name, avaragePrice) {
+    function ObjPrice(id, name, avaragePrice) {
         this.id = id;
         this.name = name;
         this.avaragePrice = avaragePrice;
@@ -50,7 +62,7 @@ window.onload = function () {
     for (let i = 0; i < task_2.length; i++) {
         const {id, name, firstPrice, secondPrice} = task_2[i];
         const avaragePrice = (firstPrice + secondPrice) / 2;
-        newArray[i] = new objPrice(id, name, avaragePrice);
+        newArray[i] = new ObjPrice(id, name, avaragePrice);
     }
 
     console.log(newArray);
