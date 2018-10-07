@@ -66,7 +66,19 @@ let userInfo = '{\
   }'
 
 let data = JSON.parse(userInfo);
-let {requestId, result: [{accountNumber, balance: {otb}, cards: [{ucid, expireDate, expireDate: {year}}], overdraftInfo: {lastCloseDayOverBalance}, bank: {id}}]} = data;
+let {
+  requestId,
+  result: [{
+    accountNumber,
+    balance: {otb},
+    cards: [{ucid,
+      expireDate,
+      expireDate: {year}}],
+    overdraftInfo: {lastCloseDayOverBalance},
+    bank: {id}
+  }]
+} = data;
+
 alert(requestId);
 alert(accountNumber);
 alert(otb);
