@@ -63,18 +63,11 @@ const newData = [
     }
 ]
 
-function getNewArray(array) {
-    let newArray = [];
-
-    for (let element of array) {
-        let newElement = {};
-        newElement['id'] = element["id"];
-        newElement['name'] = element["name"];
-        newElement['avaragePrice'] = (element["firstPrice"] + element["secondPrice"]) / 2;
-        newArray.push(newElement);
-        }
-    return newArray;
-}
-
-console.log("Новий масив: ");
-console.log(getNewArray(newData));
+const getNewData = newData.map(({id, name, firstPrice, secondPrice }) =>
+    ({
+        id,
+        name,
+        avaragePrice: (firstPrice + secondPrice) / 2
+    }));
+console.log("Новий масиив: ");
+console.log(getNewData); 
