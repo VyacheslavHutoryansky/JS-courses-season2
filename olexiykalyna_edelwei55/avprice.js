@@ -61,7 +61,7 @@
   }
 ]
 
-let average = AveragePrice(priceList);
+let average = averagePrice(priceList);
 
 function AveragePrice(priceList) {
    let priceData = ({id, name, firstPrice, secondPrice}) => ({id, name, averagePrice: (firstPrice/2 + secondPrice/2)});
