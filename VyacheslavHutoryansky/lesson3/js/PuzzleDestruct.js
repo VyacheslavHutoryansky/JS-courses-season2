@@ -1,7 +1,6 @@
-let userInfo={
+let userInfo = {
     "requestId": "eed3fc9d337261ea23f0",
-    "result": [
-        {
+    "result": [ {
             "accountNumber": "40802810800000018334",
             "agreementNumber": "7000351523",
             "type": 14,
@@ -63,12 +62,12 @@ let userInfo={
         }
     ],
     "success": true
-            };
+};
 const {requestId,
     result:[{accountNumber, balance:{otb},
     cards:[{ucid, expireDate, expireDate:{year}}],
     overdraftInfo:{lastCloseDayOverBalance},
-    bank:{id}}]}=userInfo;
+    bank:{id}}]} = userInfo;
 
 console.log(requestId);
 console.log(accountNumber);
